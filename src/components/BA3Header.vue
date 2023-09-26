@@ -21,8 +21,18 @@ const mostrarCategoriasHandler = () => {
         <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="" />
       </button>
       <div id="topicos" style="margin-top: 10px;" v-if="mostrarCategorias">
-        <div id="categorias"></div>
-        <div id="sugestoes"></div>
+        <div id="categorias">
+          <h1>categorias</h1>
+          <p>Drama</p>
+          <p>Ação</p>
+          <p>Comédia</p>
+          <p>Fantasia</p>
+          <p>Aventura</p>
+        </div>
+        <hr>
+        <div id="sugestoes">
+          <h1>Sugestoes</h1>
+        </div>
       </div>
     </div>
     <div id="login">
@@ -36,7 +46,13 @@ const mostrarCategoriasHandler = () => {
 </template>
 
 <style scoped>
-header {
+#categorias{
+  padding: 5px 10px 10px 10px
+}
+#sugestoes{
+  padding: 5px 10px 10px 10px
+}
+header {;
   display: flex;
   justify-content: space-between;
   background-color: rgb(0, 0, 0);
@@ -47,9 +63,15 @@ header {
 
 #topicos{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-direction: row;
   background-color: blue;
-  width: 20vh;
+  /* width: 20vh; */
+  justify-content: space-around;
+  border-radius: 5px;
+  /* padding: 10px; */
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px 2px rgb(77, 76, 76);
 }
 
 #titulo img {
